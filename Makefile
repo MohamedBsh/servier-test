@@ -1,4 +1,4 @@
-.PHONY: build init_docker run_manual_dag clean find_top_journal get_output install-dev test up up-d status
+.PHONY: build init_docker test run_manual_dag clean find_top_journal get_output install-dev test up up-d status
 
 JSON_FILE ?= servier/data/drug_mentions_graph.json
 
@@ -25,6 +25,9 @@ run_manual_dag:
 clean:
 	docker-compose down --volumes --remove-orphans
 	rm -rf dist build *.egg-info
+
+test:
+	pytest tests
 
 find_top_journal:
 	python3 -c "from journal_drug_extractor import extract_journal_with_most_drugs; extract_journal_with_most_drugs('$(JSON_FILE)')"
