@@ -1,0 +1,7 @@
+.poetry
+.git
+.cache
+.local
+.logs
+.dist
+.pyenv

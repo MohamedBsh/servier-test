@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "servier"
+version = "0.1.0"
+description = ""
+authors = ["MohamedBsh <m.bousahih@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+apache-airflow = "2.4.3"
+pandas = "1.1.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
